@@ -100,16 +100,6 @@ sql-data-warehouse-project/
 
 ---
 
-## 📈 Future Improvements
-
-- Add incremental loading
-- Add historical data tracking
-- Connect to Power BI / Tableau
-- Automate ETL process
-- Add stored procedures
-
----
-
 ## 📝 Notes
 
 This project is for learning purposes and follows real-world data engineering practices.
