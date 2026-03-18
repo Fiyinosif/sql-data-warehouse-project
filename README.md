@@ -26,7 +26,7 @@ This project follows industry-style data warehouse architecture.
 
 ## 🏗️ Data Architecture
 
-![Architecture](docs/architecture.png)
+![Architecture](docs/Architecture.drawio.png)
 
 This project uses the **Medallion Architecture** with three layers:
 
