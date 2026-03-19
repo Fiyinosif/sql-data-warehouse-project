@@ -110,6 +110,7 @@ The goal is to simulate how data warehouses are built in industry environments.
 ## 👤 Author
 
 Fiyinfoluwa Osifala
+
 ---
 
 ## 📜 License
