@@ -109,8 +109,8 @@ The goal is to simulate how data warehouses are built in industry environments.
 
 ## 👤 Author
 
-Fiyinfoluwa Osifala
-Interested in Data Engineering, Data Analytics, and Backend Development
+-Fiyinfoluwa Osifala
+-Interested in Data Engineering, Data Analytics, and Backend Development
 
 ---
 
