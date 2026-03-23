@@ -80,7 +80,7 @@ This project uses the Medallion Architecture with three layers.
 
 ## 🏗️ Data Model
 
-![Data_Model](docs/data_model.drawio.png)
+![Data_Model](docs/data_model.drawio(1).png)
 
 The gold layer follows a dimensional model with fact and dimension tables designed for analytical queries and reporting.
 
