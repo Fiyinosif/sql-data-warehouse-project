@@ -11,9 +11,11 @@ The goal of this project is to showcase practical skills in data engineering, da
 
 In this project, I built a complete data warehouse pipeline from raw CSV files to business-ready analytical tables.
 
+The project simulates integrating data from multiple source systems (CRM and ERP) into a centralized data warehouse using Medallion Architecture.
+
 The project includes:
 
-- Loading raw data from multiple sources
+- Loading raw data from multiple source systems
 - Cleaning and transforming data
 - Designing a layered data warehouse
 - Creating fact and dimension tables
@@ -24,11 +26,37 @@ This project follows industry-style data warehouse architecture.
 
 ---
 
+## 📂 Data Sources
+
+The data warehouse integrates data from two simulated source systems.
+
+### CRM Source
+Contains customer, product, and sales transaction data.
+
+Tables:
+- crm_cust_info
+- crm_prd_info
+- crm_sales_details
+
+### ERP Source
+Contains additional customer and product information.
+
+Tables:
+- erp_cust_az12
+- erp_loc_a101
+- erp_px_cat_g1v2
+
+All source data is stored as CSV files and loaded into the bronze layer before transformation.
+
+![data_Integration_model](docs/data_integration_model.drawio.png)
+
+---
+
 ## 🏗️ Data Architecture
 
 ![Architecture](docs/Architecture.drawio.png)
 
-This project uses the **Medallion Architecture** with three layers:
+This project uses the Medallion Architecture with three layers.
 
 ### Bronze Layer
 - Stores raw data from source systems
@@ -37,54 +65,63 @@ This project uses the **Medallion Architecture** with three layers:
 
 ### Silver Layer
 - Data cleaning and standardization
-- Removing duplicates and fixing errors
-- Preparing data for modeling
+- Data normalization and enrichment
+- Derived columns and validation
+- Prepared for modeling
 
 ### Gold Layer
 - Business-ready tables
 - Star schema design
 - Optimized for analytics and reporting
 
+![Data_flow_diagram](docs/data_flow_diagram.drawio.png)
+
+---
+
+## 🏗️ Data Model
+
+![Data_Model](docs/data_model.drawio.png)
+
+The gold layer follows a dimensional model with fact and dimension tables designed for analytical queries and reporting.
+
 ---
 
 ## 🛠️ Technologies Used
 
-- 💾 SQL Server
-- 🧠 T-SQL
-- 🗄️ Data Warehousing
-- 🔄 ETL Pipelines
-- 📊 Data Modeling
-- 🧰 Git & GitHub
-- 🖼️ Draw.io
+- SQL Server
+- T-SQL
+- Data Warehousing
+- ETL Pipelines
+- Data Modeling
+- Git & GitHub
+- Draw.io
 
 ---
 
 ## 📊 Skills Demonstrated
 
-- 🏗️ Data Warehousing
-- 🔄 ETL Development
-- 🧹 Data Cleaning & Transformation
-- ⭐ Star Schema Modeling
-- 📈 SQL Analytics
-- 🗄️ Database Design
-- 🔧 Git Version Control
-  
- ---
+- Data Warehousing
+- ETL Development
+- Data Cleaning & Transformation
+- Star Schema Modeling
+- SQL Analytics
+- Database Design
+- Git Version Control
 
+---
 
 ## 📦 Project Structure
-
 ```
 sql-data-warehouse-project/
 │
-├── datasets/        # Raw data files
-├── docs/            # Diagrams and documentation
+├── datasets/ # Raw data files (CRM & ERP)
+├── docs/ # Diagrams and documentation
 ├── scripts/
-│   ├── bronze/      # Load raw data
-│   ├── silver/      # Clean & transform data
-│   └── gold/        # Analytical models
+│ ├── bronze/ # Raw layer load
+│ ├── silver/ # Cleaned layer
+│ └── gold/ # Analytical layer
 │
-├── tests/           # Validation scripts
+├── tests/ # Data quality checks
 ├── README.md
 ```
 
@@ -102,7 +139,7 @@ sql-data-warehouse-project/
 
 ## 📝 Notes
 
-This project is for learning purposes and follows real-world data engineering practices.
+This project is for learning purposes and follows real-world data engineering practices.  
 The goal is to simulate how data warehouses are built in industry environments.
 
 ---
